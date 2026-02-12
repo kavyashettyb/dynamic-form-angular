@@ -1,0 +1,19 @@
+<ng-container *ngIf="(schema$ | async) as schema">
+  <ng-container *ngIf="(form$ | async) as form">
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+
+      <ng-container *ngFor="let section of schema.sections; trackBy: trackById">
+        <app-form-section [section]="section"></app-form-section>
+      </ng-container>
+
+      <div class="form-actions">
+      <button type="submit" [disabled]="form.invalid">
+        Submit
+      </button>
+      </div>
+
+    </form>
+
+  </ng-container>
+</ng-container>

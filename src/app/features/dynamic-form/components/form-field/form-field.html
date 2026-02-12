@@ -1,0 +1,25 @@
+
+
+<ng-container *ngIf="field.visibility !== false">
+
+  <app-text-field
+    *ngIf="field.type === 'text'"
+    [field]="field">
+  </app-text-field>
+
+  <app-number-field
+    *ngIf="field.type === 'number'"
+    [field]="field">
+  </app-number-field>
+
+  <app-select-field
+    *ngIf="field.type === 'select'"
+    [field]="field">
+  </app-select-field>
+
+  <app-date-field
+    *ngIf="field.type === 'date'"
+    [field]="field">
+  </app-date-field>
+
+</ng-container>

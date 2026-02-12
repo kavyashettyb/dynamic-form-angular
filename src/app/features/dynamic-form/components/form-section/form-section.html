@@ -1,0 +1,10 @@
+<div class="section">
+  <h3>{{ section.title }}</h3>
+
+  <ng-container *ngFor="let field of section.fields; trackBy: trackByKey">
+    <app-form-field
+      [field]="field">
+    </app-form-field>
+  </ng-container>
+
+</div>

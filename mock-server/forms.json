@@ -1,0 +1,223 @@
+
+{
+  "forms": [
+    {
+      "id": "banking-form",
+      "sections": [
+
+        {
+          "id": "customer",
+          "title": "Customer Information",
+          "visibility": true,
+          "fields": [
+            {
+              "key": "customerType",
+              "label": "Customer Type",
+              "type": "select",
+              "visibility": true,
+              "options": [
+                { "label": "Individual", "value": "IND" },
+                { "label": "Business", "value": "BUS" }
+              ],
+              "validations": [
+                { "type": "required" }
+              ]
+            },
+            {
+              "key": "firstName",
+              "label": "First Name",
+              "type": "text",
+              "visibility": true,
+              "validations": [
+                { "type": "required" },
+                { "type": "minLength", "value": 2 },
+                { "type": "maxLength", "value": 30 }
+              ]
+            },
+            {
+              "key": "lastName",
+              "label": "Last Name",
+              "type": "text",
+              "visibility": true,
+              "validations": [
+                { "type": "required" },
+                { "type": "minLength", "value": 2 }
+              ]
+            },
+            {
+              "key": "dob",
+              "label": "Date of Birth",
+              "type": "date",
+              "visibility": true,
+              "validations": [
+                { "type": "required" }
+              ]
+            },
+            {
+              "key": "age",
+              "label": "Age",
+              "type": "number",
+              "visibility": true,
+              "validations": [
+                { "type": "required" },
+                { "type": "min", "value": 18 },
+                { "type": "max", "value": 75 }
+              ]
+            }
+          ]
+        },
+
+        {
+          "id": "contact",
+          "title": "Contact Details",
+          "visibility": true,
+          "fields": [
+            {
+              "key": "email",
+              "label": "Email Address",
+              "type": "text",
+              "visibility": true,
+              "validations": [
+                { "type": "required" },
+                { "type": "pattern", "value": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$" }
+              ]
+            },
+            {
+              "key": "phone",
+              "label": "Phone Number",
+              "type": "text",
+              "visibility": true,
+              "validations": [
+                { "type": "required" },
+                { "type": "minLength", "value": 10 },
+                { "type": "maxLength", "value": 10 }
+              ]
+            },
+            {
+              "key": "address",
+              "label": "Address",
+              "type": "text",
+              "visibility": true,
+              "validations": [
+                { "type": "required" },
+                { "type": "minLength", "value": 10 }
+              ]
+            },
+            {
+              "key": "city",
+              "label": "City",
+              "type": "text",
+              "visibility": true,
+              "validations": [
+                { "type": "required" }
+              ]
+            },
+            {
+              "key": "postalCode",
+              "label": "Postal Code",
+              "type": "number",
+              "visibility": true,
+              "validations": [
+                { "type": "required" }
+              ]
+            }
+          ]
+        },
+
+        {
+          "id": "employment",
+          "title": "Employment Details",
+          "visibility": true,
+          "fields": [
+            {
+              "key": "employmentType",
+              "label": "Employment Type",
+              "type": "select",
+              "visibility": true,
+              "options": [
+                { "label": "Salaried", "value": "SAL" },
+                { "label": "Self Employed", "value": "SELF" },
+                { "label": "Unemployed", "value": "NONE" }
+              ],
+              "validations": [
+                { "type": "required" }
+              ]
+            },
+            {
+              "key": "companyName",
+              "label": "Company Name",
+              "type": "text",
+              "visibility": true,
+              "validations": [
+                { "type": "minLength", "value": 3 }
+              ]
+            },
+            {
+              "key": "annualIncome",
+              "label": "Annual Income",
+              "type": "number",
+              "visibility": true,
+              "validations": [
+                { "type": "required" },
+                { "type": "min", "value": 10000 }
+              ]
+            },
+            {
+              "key": "experience",
+              "label": "Years of Experience",
+              "type": "number",
+              "visibility": true,
+              "validations": [
+                { "type": "min", "value": 0 },
+                { "type": "max", "value": 50 }
+              ]
+            }
+          ]
+        },
+
+        {
+          "id": "account",
+          "title": "Account Preferences",
+          "visibility": true,
+          "fields": [
+            {
+              "key": "accountType",
+              "label": "Account Type",
+              "type": "select",
+              "visibility": true,
+              "options": [
+                { "label": "Savings", "value": "SAV" },
+                { "label": "Current", "value": "CUR" },
+                { "label": "Fixed Deposit", "value": "FD" }
+              ],
+              "validations": [
+                { "type": "required" }
+              ]
+            },
+            {
+              "key": "initialDeposit",
+              "label": "Initial Deposit Amount",
+              "type": "number",
+              "visibility": true,
+              "validations": [
+                { "type": "required" },
+                { "type": "min", "value": 1000 }
+              ]
+            },
+            {
+              "key": "branchCode",
+              "label": "Preferred Branch Code",
+              "type": "text",
+              "visibility": true,
+              "validations": [
+                { "type": "required" },
+                { "type": "minLength", "value": 4 }
+              ]
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}
