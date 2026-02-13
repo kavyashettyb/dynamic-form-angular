@@ -32,6 +32,11 @@ Application runs at:  http://localhost:4200
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
+## Application Preview
+
+### Dynamic Form UI Screenshot Reference Path
+![Dynamic Form](screenshots/form-view.png) 
+
 
 ## Architecture Overview
 
